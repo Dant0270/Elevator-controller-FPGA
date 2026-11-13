@@ -11,7 +11,7 @@ Mở elevator.qpf, top elevator_top, thiết bị 10M02SCM153I7G, clock 12 MHz J
 - Pending có 4 bit để lưu yêu cầu khi đang chạy hoặc đang báo đến tầng. Khi rảnh, chọn tầng gần nhất, hòa ưu tiên tầng thấp. Hoàn thành đích hiện tại trước, chưa đón dọc đường.
 - Khi tới đích trong hoạt động thường, LED1 sáng 250 ms rồi tắt 250 ms, lặp đúng 3 nhịp (1,5 giây) trước khi chọn chuyến kế tiếp. Gọi ngay tầng đang đứng được phục vụ tại chỗ, không nháy thêm.
 - LED1 được gán N15. LED_ACTIVE_LOW mặc định 0; nếu LED đơn trên kit có cực tính ngược, đổi tham số này thành 1. Cực tính LED đơn chưa được xác nhận bằng ảnh; không suy từ LED 7 đoạn.
-- Buzzer BEEPER tại GPIO14/R11 phát 3 tiếng cùng LED báo đến tầng và ngắt quãng liên tục trong chế độ khẩn cấp. Sóng kích mặc định 2 kHz, tắt ở mọi khoảng không báo.
+- Buzzer BEEPER dùng GPIO16 (`PIN_R14`). Khi đến tầng, còi bíp một lần khoảng 200 ms và LED nháy ba lần. Khi khẩn cấp, còi báo ngắt quãng theo LED. Tần số kích mặc định là 2 kHz.
 
 ## Các trạng thái
 
